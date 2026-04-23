@@ -70,6 +70,13 @@ def main():
 
 
 
+# 5.7 Bonusy
+    print("Průměr skupinky:", results.average())
+    print("Nejvyšší sk:", results.best())
+    print("Nejnižší sk:", results.worst())
+    print("Nedostali F:", results.pass_rate())
+    print(results)  # použije str
+
 
 
 

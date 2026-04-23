@@ -49,3 +49,29 @@ class StudentsGrades:
                     kopie_cisel[j + 1] = x
 
         return kopie_cisel
+
+
+
+# 5.7 Bonusy (dobrovolné)
+    #1
+    def average(self):
+        prumer = sum(self.scores)/len(self.scores)
+        return prumer
+    #2
+    def best(self):
+        nejvyssi = max(self.scores)
+        return nejvyssi
+    def worst(self):
+        nejnizssi = min(self.scores)
+        return nejnizssi
+    #3
+    def pass_rate(self):
+        nedostaliF = 0
+        for pocet_b in self.scores:
+            if pocet_b >= 50:
+                nedostaliF += 1
+            pocet = nedostaliF/len(self.scores)
+        return pocet
+    #4
+    def __str__(self):
+        return f"StudentsGrades: {self.count()} studentů, průměr {self.average():.1f}"
