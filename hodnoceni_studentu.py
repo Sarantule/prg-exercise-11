@@ -22,3 +22,14 @@ class StudentsGrades:
             return "E"
         else:
             return "F"
+
+
+
+# ÚKOL: Vyhledávání studentů s konkrétním počtem bodů - metoda find()
+    def find(self, pocet_b):
+        hled_indexy = []
+        for i, cislo in enumerate(self.scores):
+            if cislo == pocet_b:
+                hled_indexy.append(i)
+        return hled_indexy
+

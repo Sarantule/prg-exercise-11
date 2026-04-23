@@ -34,6 +34,11 @@ def main():
 
 
 
+# ÚKOL: Vyhledávání studentů s konkrétním počtem bodů - metoda find()
+    print(results.find(100))  # [6]
+    print(results.find(50))  # [4]
+    print(results.find(77))  # []
+
 
 if __name__ == "__main__":
     main()
