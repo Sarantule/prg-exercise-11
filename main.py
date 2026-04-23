@@ -40,5 +40,15 @@ def main():
     print(results.find(77))  # []
 
 
+
+# ÚKOL: Seřazení výsledků - metoda get_sorted()
+    print(results.get_sorted())   # [38, 42, 50, 58, 67, 73, 85, 91, 100]
+    print(results.scores)         # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
+
+
+
+
+# ÚKOL: Demonstrace třídy
+#1 už vypsaná výše
 if __name__ == "__main__":
     main()

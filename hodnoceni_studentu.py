@@ -33,3 +33,19 @@ class StudentsGrades:
                 hled_indexy.append(i)
         return hled_indexy
 
+
+
+# ÚKOL: Seřazení výsledků - metoda get_sorted()
+    def get_sorted(self):
+
+        kopie_cisel = self.scores.copy()
+        delka = len(kopie_cisel)
+
+        for i in range(delka):
+            for j in range(0, delka - i - 1):
+                if kopie_cisel[j] > kopie_cisel[j + 1]:
+                    x = kopie_cisel[j]
+                    kopie_cisel[j] = kopie_cisel[j + 1]
+                    kopie_cisel[j + 1] = x
+
+        return kopie_cisel
