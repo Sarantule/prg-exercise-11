@@ -50,5 +50,31 @@ def main():
 
 # ÚKOL: Demonstrace třídy
 #1 už vypsaná výše
+#2 Vypiš, kolik studentů psalo test (využij count()).
+    celkem_s = results.count()
+    print(f"Počet studentů: {celkem_s}")
+#3 V cyklu vypiš pro každého studenta jeho pořadí (index), počet bodů a písmennou známku.
+    for i, body in enumerate(results.scores):
+        print(f"Student {i} {body} points – {results.get_grade(i)}")
+#4 Najdi a vypiš indexy studentů, kteří měli plný počet bodů (100).
+    plny = results.find(100)
+    print(f"Studenti se 100 body: {plny}")
+#5 Vypiš seřazené výsledky od nejhoršího po nejlepšího (pomocí get_sorted()).
+    serazeno = results.get_sorted()
+    print(serazeno)
+#6 Vyzkoušej třídu i na náhodných datech. Importuj si random_numbers() ze sorting.py a vytvoř druhý objekt:
+# zkopirovano jen
+    random_results = StudentsGrades(random_numbers(30, 0, 100))
+    print(random_results.count())
+    print(random_results.get_sorted())
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     main()
