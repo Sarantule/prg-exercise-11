@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 class StudentsGrades:
     def __init__(self, scores):
         self.scores = scores
@@ -97,3 +99,25 @@ class StudentsGrades:
             else:
                 prava = uprostred - 1
         return None
+
+
+
+# bonus histogram
+    def plot_histogram(self):
+        hodnoty = self.scores
+        intervaly = [0, 50, 60, 70, 80, 90, 100]
+        pocty, hranice, sloupce = plt.hist(hodnoty, bins=intervaly, edgecolor="black")
+        barvy = ["orange", "yellow", "lime", "cyan", "magenta"]
+
+        for sloupec, barva in zip(sloupce, barvy):
+            sloupec.set_facecolor(barva)
+
+        plt.xticks(
+            [25, 55, 65, 75, 85, 95],
+            ["F", "E", "D", "C", "B", "A"]
+        )
+
+        plt.title("Rozdělení známek")
+        plt.xlabel("Známka")
+        plt.ylabel("Počet studentů")
+        plt.show()
