@@ -1,6 +1,8 @@
 class StudentsGrades:
     def __init__(self, scores):
         self.scores = scores
+        self._sorted_scores = None
+
     def get_by_index(self, index):
         return self.scores[index]
     def count(self):
@@ -75,3 +77,23 @@ class StudentsGrades:
     #4
     def __str__(self):
         return f"StudentsGrades: {self.count()} studentů, průměr {self.average():.1f}"
+
+
+
+
+# ÚKOL: Implementace find_sorted() s cache
+    def find_sorted(self, score):
+        if self._sorted_scores is None:
+            self._sorted_scores = self.get_sorted() # v zadani
+        leva = 0
+        prava = len(self._sorted_scores) - 1
+
+        while leva <= prava:
+            uprostred = (leva + prava) // 2
+            if self._sorted_scores[uprostred] == score:
+                return uprostred
+            if self._sorted_scores[uprostred] < score:
+                leva = uprostred + 1
+            else:
+                prava = uprostred - 1
+        return None

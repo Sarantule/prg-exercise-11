@@ -20,9 +20,10 @@ def main():
     print("Na začátku seznam:", seznam)
     print("Seřazený seznam:", bubble_sort(seznam))
 
-    nahodny_seznam = random_numbers(20)
-    print("Na začátku náhodný seznam:", nahodny_seznam)
-    print("Seřazené náhodný seznam:", bubble_sort(nahodny_seznam))
+    #nahodny_seznam = random_numbers(20)
+    #zakomentovano - rusi to, ale funguje
+    #print("Na začátku náhodný seznam:", nahodny_seznam)
+    #print("Seřazené náhodný seznam:", bubble_sort(nahodny_seznam))
 
 
 
@@ -76,6 +77,18 @@ def main():
     print("Nejnižší sk:", results.worst())
     print("Nedostali F:", results.pass_rate())
     print(results)  # použije str
+
+
+
+
+
+
+    # bonus!!!!!!
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+
+    print(results.find_sorted(91))  # sorting…  → index 7
+    print(results.find_sorted(50))  # → index 2 (už neřadí)
+    print(results.find_sorted(77))  # → None  (77 tam není)
 
 
 
